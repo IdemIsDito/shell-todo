@@ -3,12 +3,8 @@ import "./App.css";
 import Button from "./components/Button";
 import Todo from "./components/Todo";
 
-function App() {
-  const [todos, setTodos] = useState([
-    { text: "Todo 1", isEditing: false },
-    { text: "Todo 2", isEditing: false },
-    { text: "Todo 3", isEditing: false },
-  ]);
+function App({ initialTodos = [] }) {
+  const [todos, setTodos] = useState(initialTodos);
 
   const onEdit = (index) => {
     const newTodos = [...todos];
@@ -40,7 +36,7 @@ function App() {
       <header className="app__header">
         <h1 className="app_title">TODO app</h1>
 
-        <Button type="add" onClick={onAddTodo}>
+        <Button id="btn-add-todo" type="add" onClick={onAddTodo}>
           Add TODO
         </Button>
       </header>

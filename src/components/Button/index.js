@@ -1,10 +1,10 @@
 import "./button.css";
 
-function Button({ children, onClick, type }) {
+function Button({ id, children, onClick, type }) {
   const buttonClassName = `btn btn--${type}`;
   
   return (
-    <button onClick={onClick} className={buttonClassName}>
+    <button data-testid={id} onClick={onClick} className={buttonClassName}>
       {children}
     </button>
   );

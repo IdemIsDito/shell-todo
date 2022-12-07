@@ -10,8 +10,8 @@ function Todo({ index, todo, onEdit, onDelete, onSave }) {
     <article className="todo__row">
       {todo.isEditing && (
         <>
-          <input className="todo__input" ref={todoRef} defaultValue={todo.text} />
-          <Button type="save" onClick={saveTodo}>
+          <input data-testid={todo.text} className="todo__input" ref={todoRef} defaultValue={todo.text} />
+          <Button id="btn-save-todo" type="save" onClick={saveTodo}>
             Save
           </Button>
         </>
@@ -19,10 +19,10 @@ function Todo({ index, todo, onEdit, onDelete, onSave }) {
       {!todo.isEditing && (
         <>
           <p className="todo__description">{todo.text}</p>
-          <Button type="edit" onClick={() => onEdit(index)}>
+          <Button id="btn-edit-todo" type="edit" onClick={() => onEdit(index)}>
             Edit
           </Button>
-          <Button type="delete" onClick={() => onDelete(index)}>
+          <Button id="btn-delete-todo" type="delete" onClick={() => onDelete(index)}>
             Delete
           </Button>
         </>
