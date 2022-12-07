@@ -1,0 +1,28 @@
+.btn {
+  background: none;
+  border: none;
+  border: 1px solid #cccccc;
+  background-color: #efefef;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn--add {
+  background-color: blue;
+  border-color: darkblue;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.btn--delete {
+  background-color: coral;
+  border-color: red;
+  font-weight: 700;
+}
+
+.btn--save {
+  background-color: lightblue;
+  border-color: blue;
+  font-weight: 700;
+}
